@@ -26,7 +26,11 @@
               <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
             </form>
             <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="">
-                <button class="btn" type="submit"><i class="fa-solid fa-basket-shopping"></i></i></button>
+                <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
+                  <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
+                    <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
+                  </div>
+                </button>
             </a>
             <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
                 <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
@@ -396,15 +400,18 @@
   </div>
   <div class="position-fixed end-0 p-3" style="z-index: 11; bottom: 10%;">
     <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header text-dark rounded-top">
+      <div class="toast-header text-light rounded-top">
         <strong class="me-auto">Đã thêm vào giỏ hàng</strong>
       </div>
       <div class="toast-body">
       </div>
     </div>
   </div>
-  <a href="Donhang.html" class="cart-icon position-fixed rounded-circle text-center text-white shadow" style="width: 55px; height: 55px; bottom: 3%; right: 45px; background-color: #FF4B2B; z-index: 2000;">
+  <a href="cart.html" class="cart-icon position-fixed rounded-circle text-center text-white shadow" style="width: 55px; height: 55px; bottom: 3%; right: 45px; background-color: #FF4B2B; z-index: 2000;">
     <i class="fa-solid fa-basket-shopping" style="line-height:55px; font-size: 22px; transition: .6s ease;"></i>
+    <div class="rounded-pill position-absolute top-0" style="height: 20px; right: -10px; padding: 0 0.4rem; background-color: #f9e686;">
+      <p class="cartItems fw-bold text-dark" style="font-size: 0.8rem;">20</p>
+    </div>
 </a>
     <script src="/assets/js/scripts.js"></script>
 </body>

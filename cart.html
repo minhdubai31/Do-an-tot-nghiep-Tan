@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán giày nè</title>
+    <script src="https://kit.fontawesome.com/fff06ecf43.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/cart.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-light d-block p-0">
+        <div class="container-fluid row justify-content-center ms-0 py-3">
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="#"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
+            <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <form class="d-flex col-7 ps-0 justify-content-end" role="search">
+              <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
+            </form>
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="">
+                <button class="btn" type="submit"><i class="fa-solid fa-basket-shopping"></i></i></button>
+            </a>
+            <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
+                <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
+            </a>
+        </div>
+        <div class="container-fluid p-0">
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: #ffd643; height: 40px;">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item active" ><a href="#scrollHome" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#scrollIntroduction" class="nav-link">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="Sanpham.html" id="dropdownMenuLink">
+                        Sản phẩm
+                        </a>                  
+                        <ul class="dropdown-menu shadow p-0 mb-2" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item py-2 rounded-top" href="Sanpham.html#scrollForMen">Nam</a></li>
+                          <li><a class="dropdown-item py-2 rounded-bottom" href="Sanpham.html#scrollForWomen">Nữ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#scrollContact" class="nav-link">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="modal fade " id="singnup-login-modal" tabindex="-1" aria-labelledby="singnup-login-modal-Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0">
+              <div class="container signup-login" id="signup-login container">
+                  <div class="form-container sign-up-container">
+                      <form action="#" style="width: 100%; transform: translateX(5px);">
+                          <h1 class="fw-bolder">Tạo tài khoản</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>Hoặc sử dụng email để đăng ký</span>
+                          <input type="text" placeholder="Tên người dùng" />
+                          <input type="email" placeholder="Tài khoản email" />
+                          <input type="password" placeholder="Mật khẩu" />
+                          <button>Đăng ký</button>
+                      </form>
+                  </div>
+                  <div class="form-container sign-in-container">
+                      <form action="#" style="width: 50%; transform: translateX(-12px)">
+                          <h1 class="fw-bolder">Đăng nhập</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>Hoặc sử dụng tài khoản email của bạn</span>
+                          <input type="email" placeholder="Tài khoản email" />
+                          <input type="password" placeholder="Mật khẩu" />
+                          <span class="mb-2"><a href="#">Quên mật khẩu?</a></span>
+                          <button>Đăng nhập</button>
+                      </form>
+                  </div>
+                  <div class="overlay-container">
+                      <div class="overlay">
+                          <div class="overlay-panel overlay-left">
+                              <h1 class="fw-bold">Bạn đã từng đến đây?</h1>
+                              <p>Hãy đăng nhập để chúng ta có thể kết nối với nhau.</p>
+                              <button class="ghost bg-dark border-0" id="signIn">Đăng nhập</button>
+                          </div>
+                          <div class="overlay-panel overlay-right">
+                              <h1 class="fw-bold">Shoes shop xin chào!</h1>
+                              <p>Nếu đây là lần đầu bạn đến đây, hãy đăng ký để nhận được thông tin mới nhất từ Shoes shop nhé!</p>
+                              <button class="ghost bg-dark border-0" id="signUp">Đăng ký</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    
+        <div class="row container-fluid justify-content-center pe-0 pt-5">
+            <div class="basket col-9">
+                <div class="basket-module">
+                    <label for="promo-code">Nhập mã giảm giá của bạn</label>
+                    <input id="promo-code" type="text" name="promo-code" maxlength="10" class="promo-code-field rounded-pill py-0" style="line-height: 2rem;">
+                    <button class="promo-code-cta btn bg-dark text-light rounded-pill">Áp dụng</button>
+                </div>
+                <div class="basket-labels">
+                    <ul>
+                        <li class="item item-heading">Sản phẩm</li>
+                        <li class="price">Đơn giá</li>
+                        <li class="quantity">Số lượng</li>
+                        <li class="subtotal pe-2">Số tiền</li>
+                    </ul>
+                </div>
+            </div>
+            <aside class="col-12 col-md-3">
+                <div class="summary">
+                    <div class="summary-total-items"><span>Có tất cả </span><span class="total-items"></span> sản phẩm</div>
+                    <div class="summary-subtotal">
+                        <div class="subtotal-title w-100">Địa chỉ giao hàng</div>
+                        <input id="promo-code" type="text" class="promo-code-field rounded-pill w-100">
+                        <div class="summary-promo hide">
+                            <div class="promo-title">Promotion</div>
+                            <div class="promo-value final-value" id="basket-promo"></div>
+                        </div>
+                    </div>
+                    <div class="summary-delivery">
+                    <select name="delivery-collection" class="summary-delivery-selection ps-1">
+                        <option value="0" disabled hidden selected="selected">Lựa chọn đơn vị vận chuyển</option>
+                        <option value="collection">VNPost</option>
+                        <option value="first-class">NinjaVan</option>
+                        <option value="second-class">Giaohangtietkiem</option>
+                        <option value="signed-for">ViettelPost</option>
+                    </select>
+                    </div>
+                    <div class="summary-total">
+                        <div class="total-title">THÀNH TIỀN</div>
+                        <div class="total-value final-value" id="basket-total">0</div>
+                    </div>
+                    <div class="summary-checkout">
+                        <button class="checkout-cta text-uppercase rounded-pill fw-bold border-0 text-light">Đặt hàng</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>
