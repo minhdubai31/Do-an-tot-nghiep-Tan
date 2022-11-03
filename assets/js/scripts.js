@@ -4,30 +4,19 @@ $(document).ready(function () {
         $('.preload-bg').fadeOut(500);
     }, 200);
 
-
-    // Dropdown menu animation for large screen
-    $('.nav-item.dropdown').hover(function () {
-        if($(window).width() > 991.98) $('.dropdown-menu').css('opacity', 0).slideDown(300).animate({ opacity: 1 }, { queue: false, duration: 300 });   
-        }, function () {
-        if($(window).width() > 991.98) $('.dropdown-menu').hide();
+    function searchbarResize() {
+        if($(window).width() > 768 && $(window).width() < 1200) {
+            $('.searchbar').css('width', '75%');
         }
-    );
-
-
-    // Sticky navigation animation
-    $(document).scroll(function () { 
-        if($(document).scrollTop() > 2) {
-            $('.navbar').css({'line-height':'1.5rem', 'transform' : 'translateY(-24px)'});
-            $('.navbar-toggler').css('margin', '0');
-            if($(window).width() > 991.98) $('.summary').css('transform', 'translateY(-48px)');
+        else {
+            $('.searchbar').css('width','90%');
         }
-        if($(document).scrollTop()<50) {
-            $('.navbar').css({'line-height': '3rem', 'transform' : 'translateY(0)'});
-            $('.navbar-toggler').css('margin', '0.8rem 0');
-            $('.summary').css('transform', 'translateY(0)');
-        }
-    });
+    }
 
+    searchbarResize();
+    $(window).resize(function() {
+        searchbarResize();
+    })
 
     // Navigation for medium and small screen
     var showmenu = false;
@@ -527,12 +516,14 @@ function addCart(code) {
         $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là ${window.localStorage.getItem(code)}.`);
     }
     $('#liveToast').fadeIn();
-    $(".cart-icon i").css("transform", "translate(-2px, -5px)");
+    $(".cart-icon i").css("transform", "translate(0, -5px)");
     $(".cart-icon i").css("font-size", "35px");
+    $(".cart-icon i").css("transition", ".25s linear");
     setTimeout(function() {
-        $(".cart-icon i").css("transform", "translate(-2px, 0)");
         $(".cart-icon i").css("font-size", "22px");
-    },500)
+        $(".cart-icon i").css("transition", ".15s linear");
+        $(".cart-icon i").css("transform", "none");
+    },250)
     setTimeout(function(){$('#liveToast').fadeOut()}, 3000);
 }
 
