@@ -99,6 +99,11 @@ function countCart() {
             cartItems += parseInt(window.localStorage.getItem(product));
         }
     }
+    for(const product in specialList) {
+        if(window.localStorage.getItem(product) > 0) {
+            cartItems += parseInt(window.localStorage.getItem(product));
+        }
+    }
 }
 
 countCart();
@@ -107,15 +112,25 @@ $(".cartItems").text(cartItems);
 
 // Add to cart
 function addCart(code) {
-    $('#liveToast').stop(true, true);
+    $('#liveToast').stop(true, false);
     var currentValue = parseInt(window.localStorage.getItem(code))
     if(window.localStorage.getItem(code) == null) {
         window.localStorage.setItem(code, 1)
-        $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là 1.`);
+        if(code.slice(0, 7) == "special") {
+            $('.toast-body').html(`Đã thêm ${specialList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là 1.`);
+        }
+        else {
+            $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là 1.`);
+        }
     }
-    else{
+    else {
         window.localStorage.setItem(code, 1+currentValue)
-        $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là ${window.localStorage.getItem(code)}.`);
+        if(code.slice(0, 7) == "special") {
+            $('.toast-body').html(`Đã thêm ${specialList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là ${window.localStorage.getItem(code)}.`);
+        }
+        else {
+            $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là ${window.localStorage.getItem(code)}.`);
+        }
     }
 
     //Update badge
@@ -171,7 +186,7 @@ for (const product in itemList) {
             <img class="img-hover-effect" src="${itemList[product].photo}" alt="" class="card-img-top">
             <div class="card-body">
                 <h5 class="car-title fs-5">${itemList[product].name}</h5>
-                <p class="card-text fs-6">${new Intl.NumberFormat({ style: 'currency'}).format(itemList[product].price)} VND</p>
+                <p class="card-text fs-6">${new Intl.NumberFormat((['ban', 'id'])).format(itemList[product].price)} VND</p>
             </div>
             <div class="card-footer text-center border-top-0">
                 <a title="Thêm yêu thích" class="pe-2 heart-icon ${product}" onclick="addWishList('${product}');"><i class="fa-regular fa-heart"></i></a>
@@ -226,7 +241,7 @@ function addSpecialProductCarousel(col) {
         <img class="w-100 img-hover-effect rounded-top" src="${specialList[product].photo}" alt="">
         <div class="card-body">
                     <h5 class="card-title fs-5">${specialList[product].name}</h5>
-                    <p class="card-text fs-6">${new Intl.NumberFormat({ style: 'currency'}).format(specialList[product].price)}</p>
+                    <p class="card-text fs-6">${new Intl.NumberFormat((['ban', 'id'])).format(specialList[product].price)} VND</p>
                 </div>
                 <div class="card-footer text-center border-top-0">
                     <a title="Thêm yêu thích" class="pe-2 heart-icon ${product}" onclick="addWishList('${product}');"><i class="fa-regular fa-heart"></i></a>
