@@ -66,19 +66,19 @@ function AdsResize() {
     if($(window).width() < 1200) {
         $('.leftside-carousel-inner').append(
             `<div class="carousel-item">
-                <img src="/assets/img/pic3.jpg" class="d-block w-100 rounded" alt="...">
+                <img src="./assets/img/pic3.jpg" class="d-block w-100 rounded" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/assets/img/pic4.jpg" class="d-block w-100 rounded" alt="...">
+                <img src="./assets/img/pic4.jpg" class="d-block w-100 rounded" alt="...">
             </div>`);
     }
     else {
         $('.leftside-carousel-inner').html(
             `<div class="carousel-item active">
-                <img src="/assets/img/pic1.jpg" class="d-block w-100 rounded" alt="...">
+                <img src="./assets/img/pic1.jpg" class="d-block w-100 rounded" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/assets/img/pic2.jpg" class="d-block w-100 rounded" alt="...">
+                <img src="./assets/img/pic2.jpg" class="d-block w-100 rounded" alt="...">
             </div>`);
     }
 }

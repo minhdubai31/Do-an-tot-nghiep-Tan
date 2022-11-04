@@ -16,21 +16,11 @@ a:hover {
     text-decoration: underline !important;
 }
 
-.top-head {
-    background-color: #3c3c3c;
-    font-size: 0.75rem;
-    line-height: 1.5rem;
-    z-index: 50;
-}
-
-
-
 .form-group, .navbar-toggler{
     border: solid 1px rgba(0,0,0,0.08)!important;
     border-radius: 0.5rem;
     background-color: #fff;
 }
-
 
 .navbar {
     line-height: 3rem;
@@ -52,7 +42,7 @@ a:hover {
 }
 
 .navbar-nav .nav-item:hover {
-    transition: .5s;
+    transition: .3s;
     background-color: rgba(0,0,0,0.7)!important;
 }
 
@@ -74,7 +64,6 @@ a:hover {
     transition: .3s;
 }
 
-
 .preload-bg {
     width: 100%;
     height: 100%;
@@ -95,7 +84,6 @@ a:hover {
     left: 0;
     right: 0;
     margin: auto;
-    
     animation: spin .7s infinite linear;
 }
 
@@ -168,13 +156,11 @@ a.oder:focus {
     border-top-right-radius: 1rem!important;
 }
 
-
 /* Footer */
 
 footer, .email-input, .email-input-submit{
     font-size: 0.75rem!important;
 }
-
 
 .contacting-ways {
     font-family:'Arial Narrow', Arial, sans-serif;
@@ -182,8 +168,6 @@ footer, .email-input, .email-input-submit{
 }
 
 /* Sign in & Log in */
-
-
 .modal-dialog {
     width: 768px!important;
     max-width: 95%;
@@ -383,7 +367,6 @@ footer, .email-input, .email-input-submit{
 }
 
 /* San pham */
-
 .leftsideAds-container{
     top: 5rem;
     z-index: 10!important;
@@ -392,6 +375,7 @@ footer, .email-input, .email-input-submit{
 .navbar-toggler{
     padding: 0.17rem 0.75rem!important;
 }
+
 .navbar-toggler:focus {
     box-shadow: none!important;
 }
