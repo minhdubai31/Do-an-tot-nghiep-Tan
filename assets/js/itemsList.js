@@ -221,3 +221,46 @@ var itemList={
         "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7ac12855-c31d-4961-b131-c68d8cd65b5a/air-max-90-se-shoes-C2hpvg.png"
     }
 };
+
+var specialList = {
+    "special1":{ 
+        "name":"Nike Go FlyEase",
+        "price":3519000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-shoe-5nWPkx.png"
+    },
+    "special2":{ 
+        "name":"Nike Air Force 1 '07 LV8",
+        "price":3089000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/341e2ed9-9797-4f15-8d4f-265071377068/air-force-1-07-lv8-shoes-BS9f21.png"
+    },
+    "special3":{ 
+        "name":"Nike Air Force 1 GTX",
+        "price":4699000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e26f39f0-beaa-4a76-a6b7-ce63e3783d42/air-force-1-gtx-shoes-60rsTr.png"
+    },
+    "special4":{ 
+        "name":"Nike Air Max Excee",
+        "price":2649000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a516694e-c43a-4a90-af24-867dda765485/air-max-excee-shoe-lPbXqt.png"
+    },
+    "special5":{ 
+        "name":"Nike Court React Vapor NXT",
+        "price":4699000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3eb489c7-9793-417c-abfa-217314b2596d/nikecourt-react-vapor-nxt-hard-court-tennis-shoe-hJflW9.png"
+    },
+    "special6":{ 
+        "name":"Nike Blazer Low '77 Jumbo",
+        "price":2779000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e2a045c5-7393-4717-9ddf-b6de12cfe641/blazer-low-77-jumbo-shoes-RGNB3j.png"
+    },
+    "special7":{ 
+        "name":"Nike Waffle One",
+        "price":2929000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bbb67f5d-0c85-41b9-b550-ee955d151cda/waffle-one-shoes-1SFQwJ.png"
+    },
+    "special8":{ 
+        "name":"Nike Air Max INTRLK lite",
+        "price":2349000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ddfa2ece-01cc-4e30-8a60-d5fe922d3102/air-max-intrlk-lite-shoes-nfMxNF.png"
+    }
+}

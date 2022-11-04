@@ -19,7 +19,7 @@
 
     <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
         <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .5s ease;">
-            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="#"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="index.html"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
             <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
             </button>
@@ -27,7 +27,7 @@
               <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
               <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
             </form>
-            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="">
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="cart.html">
                 <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
                   <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
                     <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
@@ -49,16 +49,17 @@
                 <li class="nav-item active" ><a href="#scrollHome" class="nav-link">Trang chủ</a></li>
                     <li class="nav-item"><a href="#scrollIntroduction" class="nav-link">Giới thiệu</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="Sanpham.html" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="product.html">
                             Sản phẩm
-                            </a>                  
+                            </a>
+                                              
                             <ul class="dropdown-menu shadow p-0 mb-2 rounded-0" aria-labelledby="dropdownMenuLink">
-                              <li><a class="dropdown-item py-2 fw-bold" href="Sanpham.html#scrollForMen">Nam</a></li>
-                              <li><a class="dropdown-item py-2 fw-bold" href="Sanpham.html#scrollForWomen">Nữ</a></li>
+                              <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollForMen">Nam</a></li>
+                              <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollForWomen">Nữ</a></li>
                             </ul>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#scrollContact" class="nav-link">Liên hệ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
               </ul>
             </div>
           </div>
@@ -158,113 +159,10 @@
           <div id="carousel-new-products" class="carousel slide align-items-center rounded h-100 py-2" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-indicators mt-5">
                 <button type="button" data-bs-target="#carousel-new-products" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel-new-products" data-bs-slide-to="1" aria-label="Slide 2"></button>
               </div>  
-            <div class="carousel-inner carousel-new-products">
-                  <div class="carousel-item active">
-                      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f33bed88c81c4409a289adfa0186d4ee_9366/Giay_Golf_BOA_Tour360_22_trang_GY5337_01_standard.jpg" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Adidas BOA TOUR360</h5>
-                                      <p class="card-text fs-6">6.150.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new01');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>  
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d96de4432d7a4b29be12ae0b00dba127_9366/Giay_NMD_V3_trang_GW3063_01_standard.jpg" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Adidas NMD V3</h5>
-                                      <p class="card-text fs-6">4.000.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new02');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9326e8db8d8e4e509e42ad26010cf693_9366/Giay_adidas_4DFWD_Pulse_DJen_Q46451_01_standard.jpg" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Adidas 4DFWD PULSE</h5>
-                                      <p class="card-text fs-6">4.500.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new03');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/99323516f2004510bd8aadf901472e5d_9366/Giay_Ultraboost_22_DJen_GX5564_01_standard.jpg" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Adidas Ultraboost 22</h5>
-                                      <p class="card-text fs-6">5.200.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new04');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>  
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec6e3201-e235-4c25-ba5d-e8d0ef7e0478/air-jordan-xxxvi-pf-basketball-shoes-fjPfDg.png" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Nike Air Jordan XXXVI</h5>
-                                      <p class="card-text fs-6">5.439.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new05');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>  
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a31b078d-f2ce-422b-8231-5817f908a40d/air-force-1-high-07-lv8-vintage-shoes-s7bp1q.png" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Nike Air Force 1 High</h5>
-                                      <p class="card-text fs-6">3.669.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new06');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2d484182-8596-4d88-aa63-3d594d010d4a/pg-6-ep-basketball-shoes-9KkDtr.png" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Nike PG 6 EP</h5>
-                                      <p class="card-text fs-6">3.239.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new07');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col">
-                              <div class="card h-100 rounded-0">
-                                  <img class="w-100 img-hover-effect rounded-top" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7ac12855-c31d-4961-b131-c68d8cd65b5a/air-max-90-se-shoes-C2hpvg.png" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title fs-5">Nike Air Max 90 SE</h5>
-                                      <p class="card-text fs-6">3.829.000đ</p>
-                                  </div>
-                                  <div class="card-footer text-center border-top-0">
-                                      <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('new08');">Mua ngay</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>    
-                  </div>
+            <div class="carousel-inner carousel-new-products add-carousel-slide">
+                  
+        
               </div>
 
               <!-- Carousel control button -->
@@ -293,103 +191,8 @@
           <h3 class="fw-bold">Sản phẩm bán chạy</h3>
 
           <!--Hot selling products cards -->
-          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4" style="white-space: nowrap;">
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-shoe-5nWPkx.png" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Nike Go FlyEase</h5>
-                          <p class="card-text fs-6">3.519.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp001');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a516694e-c43a-4a90-af24-867dda765485/air-max-excee-shoe-lPbXqt.png" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Nike Air Max Excee</h5>
-                          <p class="card-text fs-6">2.649.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp004');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6e840eb6-3c2b-43d2-9d58-81b1a1019f8e/air-force-1-07-shoes-ZMwtBc.png" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Nike Air Force 1 '07</h5>
-                          <p class="card-text fs-6">3.519.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder"onclick="addCart('sp020');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/13692558-551a-4b52-a05b-3124ece1962c/icon-classic-sandals-Jrc3kN.png" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Nike Icon Classic</h5>
-                          <p class="card-text fs-6">1.759.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder"onclick="addCart('sp022');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f91e2c9028c94126b019ae2700181efb_9366/gi%C3%A0y-stan-smith.jpg" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Stan Smith</h5>
-                          <p class="card-text fs-6">2.500.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp028');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a91d835f0ea4264a7e9ad8d01255d76_9366/gi%C3%A0y-adidas-x-allbirds.jpg" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Adidas x Allbirds</h5>
-                          <p class="card-text fs-6">3.500.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp016');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/60eaacc01c724729bc58ae4a0031298d_9366/gi%C3%A0y-superstar.jpg" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Superstar</h5>
-                          <p class="card-text fs-6">2.500.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp034');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col my-2">
-                  <div class="card h-100 rounded-0">
-                      <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d4d72e14c9164c9f9266ac9200ccff34_9366/gi%C3%A0y-run-falcon-2.0.jpg" alt="" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="car-title fs-5">Run Falcon 2.0</h5>
-                          <p class="card-text fs-6">1.500.000đ</p>
-                      </div>
-                      <div class="card-footer text-center border-top-0">
-                          <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp036');">Mua ngay</a>
-                      </div>
-                  </div>
-              </div>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 hot-selling-products-card">
+              
           </div>
       </div>
   </div>

@@ -18,9 +18,9 @@
 <body>
     <div class="preload-bg w-100 h-100 bg-white"><div class="spinner"></div></div> 
 
-    <nav class="navbar navbar-expand-md bg-light d-block p-0">
-        <div class="container-fluid row justify-content-center ms-0 py-3">
-            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="#"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
+    <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
+        <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .5s ease;">
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="index.html"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
             <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
             </button>
@@ -28,8 +28,12 @@
               <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
               <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
             </form>
-            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="">
-                <button class="btn" type="submit"><i class="fa-solid fa-basket-shopping"></i></i></button>
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="cart.html">
+                <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
+                  <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
+                    <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
+                  </div>
+                </button>
             </a>
             <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
                 <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
@@ -43,19 +47,20 @@
             </div>
             <div class="offcanvas-body" style="background-color: #ffd643; height: 40px;">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item active" ><a href="#scrollHome" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item active" ><a href="index.html" class="nav-link">Trang chủ</a></li>
                     <li class="nav-item"><a href="#scrollIntroduction" class="nav-link">Giới thiệu</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="Sanpham.html" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="product.html">
                             Sản phẩm
-                            </a>                  
+                            </a>
+                                              
                             <ul class="dropdown-menu shadow p-0 mb-2 rounded-0" aria-labelledby="dropdownMenuLink">
-                              <li><a class="dropdown-item py-2 fw-bold" href="Sanpham.html#scrollForMen">Nam</a></li>
-                              <li><a class="dropdown-item py-2 fw-bold" href="Sanpham.html#scrollForWomen">Nữ</a></li>
+                              <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollForMen">Nam</a></li>
+                              <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollForWomen">Nữ</a></li>
                             </ul>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#scrollContact" class="nav-link">Liên hệ</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
               </ul>
             </div>
           </div>
