@@ -1,7 +1,7 @@
 * {
     overflow: unset;
     font-family: Quicksand, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 li {
@@ -103,7 +103,7 @@ i.fa-globe, i.fa-location-crosshairs, i.fa-cart-shopping {
     right: 0;
     margin: auto;
     
-    animation: spin 0.75s infinite linear;
+    animation: spin .7s infinite linear;
 }
 
 @keyframes spin {
@@ -292,65 +292,65 @@ footer, .email-input, .email-input-submit{
 
 
 .signup-login.right-panel-active .sign-in-container {
-  transform: translateX(100%);
-  display: none;
+    transform: translateX(100%);
+    display: none;
 }
 
 .signup-login .sign-up-container {
-  left: 0;
-  width: 50%;
-  opacity: 0;
-  z-index: 1;
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
 }
 
 .signup-login.right-panel-active .sign-up-container {
-  transform: translate(100%, 240px);
-  opacity: 1;
-  z-index: 5;
-  animation: show 0.1s;
+    transform: translate(100%, 240px);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.1s;
 }
 
 @keyframes show {
-  0%, 49.99% {
-    opacity: 0;
-    z-index: 1;
-  }
-  
-  50%, 100% {
-    opacity: 1;
-    z-index: 5;
-  }
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
 }
 
 .signup-login .overlay-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  transition: transform 0.6s ease-in-out;
-  z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
 }
 
 .signup-login.right-panel-active .overlay-container{
-  transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .signup-login .overlay {
-  background: #ffd643;
-  background: -webkit-linear-gradient(to right, #ffae00, #ff9900);
-  background: linear-gradient(to right, #ffae00, #ff9900);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
-  color: black;
-  position: relative;
-  left: -100%;
-  height: 100%;
-  width: 200%;
+    background: #ffd643;
+    background: -webkit-linear-gradient(to right, #ffae00, #ff9900);
+    background: linear-gradient(to right, #ffae00, #ff9900);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: black;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
     transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
 }
 
 .signup-login.right-panel-active .overlay {
@@ -358,35 +358,35 @@ footer, .email-input, .email-input-submit{
 }
 
 .signup-login .overlay-panel {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
 }
 
 .signup-login .overlay-left {
-  transform: translateX(-20%);
+    transform: translateX(-20%);
 }
 
 .signup-login.right-panel-active .overlay-left {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 .signup-login .overlay-right {
-  right: 0;
-  transform: translateX(0);
+    right: 0;
+    transform: translateX(0);
 }
 
 .signup-login.right-panel-active .overlay-right {
-  transform: translateX(20%);
+    transform: translateX(20%);
 }
 
 .signup-login .form-container .social-container a {
@@ -426,3 +426,13 @@ footer, .email-input, .email-input-submit{
 .fa-solid {
     font-size: 1.2rem;
 }
+
+.form-control {
+    border: solid 2px #ddd;
+    border-radius: .5rem;
+}
+
+input.form-control::placeholder {
+    color: lightgray;
+}
+

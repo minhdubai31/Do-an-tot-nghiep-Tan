@@ -15,8 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-light d-block p-0">
-        <div class="container-fluid row justify-content-center ms-0 py-3">
+    <div class="preload-bg w-100 h-100 bg-white"><div class="spinner"></div></div> 
+
+    <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
+        <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .5s ease;">
             <a class="navbar-brand d-block col-12 col-md-2 text-center" href="#"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
             <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
@@ -143,17 +145,6 @@
               Bạn cần một đôi giày đẹp và chất lượng? <br>
               Công việc của bạn đòi hỏi phải thay đổi nhiều đôi giày khác nhau?
           </p>
-      </div>
-
-      <div class="container-fluid container-xl">
-          <div class="row">
-              <div class="col-12 col-sm-6">
-                  <img class="w-100" src="./img/menshoes.jpg" alt="">
-              </div>
-              <div class="col-12 col-sm-6">
-                  <img class="w-100" src="./img/womenshoes.jpg" alt="">
-              </div>
-          </div>
       </div>
 
       <!-- New products -->
@@ -409,10 +400,164 @@
   </div>
   <a href="cart.html" class="cart-icon position-fixed rounded-circle text-center text-white shadow" style="width: 55px; height: 55px; bottom: 3%; right: 45px; background-color: #FF4B2B; z-index: 10;">
     <i class="fa-solid fa-basket-shopping" style="line-height:55px; font-size: 22px; transition: .6s ease;"></i>
-    <div class="rounded-pill position-absolute top-0 shadow border border-secondary" style="height: 20px; right: -10px; padding: 0 0.4rem; background-color: #f9e686;">
-      <p class="cartItems fw-bold text-dark" style="font-size: 0.8rem; transform: translateY(-1px);">20</p>
+    <div class="rounded-pill position-absolute top-0 shadow" style="height: 20px; right: -10px; border: solid 2px #ffb700 ;padding: 0 0.4rem; background-color: #f9e686;">
+      <p class="cartItems fw-bold text-dark" style="font-size: 0.8rem; transform: translateY(-2px);">20</p>
     </div>
 </a>
+<footer class="bg-dark text-center text-white" id="scrollContact">
+    <!-- Grid container -->
+        <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+            ></a>
+    
+            <!-- Google -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-google"></i
+            ></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+            ></a>
+    
+            <!-- Github -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-github"></i
+            ></a>
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Form -->
+        <section class="">
+            <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                <p class="pt-2">
+                    <strong>Đăng ký để nhận được thông tin mới nhất</strong>
+                </p>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example21" class="form-control rounded-pill email-input" placeholder="Địa chỉ email" />
+                </div>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn rounded-pill btn-outline-light mb-2 email-input-submit">
+                    Đăng ký
+                </button>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Links -->
+        <section class="mb-4">
+            <!--Grid row-->
+            <div class="row">
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Địa chỉ</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-shop"></i>
+                        Khu I, Đ. 30/4, Hưng Lợi, Ninh Kiều, Cần Thơ
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-shop"></i>
+                        Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Hotline</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-telephone"></i>
+                        0123456789
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-telephone"></i>
+                        0987654321
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Email</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-envelope"></i>
+                        Shoes_shop1@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-envelope"></i>
+                        Shoes_shop2@gmail.com
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center fw-bold text-dark p-3" style="background-color: #ffd643;">
+        © 2022 Copyright:
+        <a class="text-dark fw-bold" href="http://127.0.0.1:5500/index.html?#!">Shoesshop.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="/assets/js/itemsList.js"></script>
     <script src="/assets/js/scripts.js"></script>
 </body>
 </html>

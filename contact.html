@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán giày nè</title>
+    <script src="https://kit.fontawesome.com/fff06ecf43.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/success.css">
+</head>
+<body>
+    <div class="preload-bg w-100 h-100 bg-white"><div class="spinner"></div></div> 
+
+    <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
+        <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .5s ease;">
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="#"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
+            <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <form class="d-flex col-7 ps-0 justify-content-end" role="search">
+              <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
+            </form>
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="">
+                <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
+                  <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
+                    <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
+                  </div>
+                </button>
+            </a>
+            <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
+                <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
+            </a>
+        </div>
+        <div class="container-fluid p-0">
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: #ffd643; height: 40px;">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item active" ><a href="#scrollHome" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#scrollIntroduction" class="nav-link">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="Sanpham.html" id="dropdownMenuLink">
+                        Sản phẩm
+                        </a>                  
+                        <ul class="dropdown-menu shadow p-0 mb-2" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item py-2 rounded-top" href="Sanpham.html#scrollForMen">Nam</a></li>
+                          <li><a class="dropdown-item py-2 rounded-bottom" href="Sanpham.html#scrollForWomen">Nữ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#scrollContact" class="nav-link">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="modal fade " id="singnup-login-modal" tabindex="-1" aria-labelledby="singnup-login-modal-Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0">
+              <div class="container signup-login" id="signup-login container">
+                  <div class="form-container sign-up-container">
+                      <form action="#" style="width: 100%; transform: translateX(5px);">
+                          <h1 class="fw-bolder">Tạo tài khoản</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>Hoặc sử dụng email để đăng ký</span>
+                          <input type="text" placeholder="Tên người dùng" />
+                          <input type="email" placeholder="Tài khoản email" />
+                          <input type="password" placeholder="Mật khẩu" />
+                          <button>Đăng ký</button>
+                      </form>
+                  </div>
+                  <div class="form-container sign-in-container">
+                      <form action="#" style="width: 50%; transform: translateX(-12px)">
+                          <h1 class="fw-bolder">Đăng nhập</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>Hoặc sử dụng tài khoản email của bạn</span>
+                          <input type="email" placeholder="Tài khoản email" />
+                          <input type="password" placeholder="Mật khẩu" />
+                          <span class="mb-2"><a href="#">Quên mật khẩu?</a></span>
+                          <button>Đăng nhập</button>
+                      </form>
+                  </div>
+                  <div class="overlay-container">
+                      <div class="overlay">
+                          <div class="overlay-panel overlay-left">
+                              <h1 class="fw-bold">Bạn đã từng đến đây?</h1>
+                              <p>Hãy đăng nhập để chúng ta có thể kết nối với nhau.</p>
+                              <button class="ghost bg-dark border-0" id="signIn">Đăng nhập</button>
+                          </div>
+                          <div class="overlay-panel overlay-right">
+                              <h1 class="fw-bold">Shoes shop xin chào!</h1>
+                              <p>Nếu đây là lần đầu bạn đến đây, hãy đăng ký để nhận được thông tin mới nhất từ Shoes shop nhé!</p>
+                              <button class="ghost bg-dark border-0" id="signUp">Đăng ký</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<div class="contact-container pb-4">
+    <h1 class="contact-header text-uppercase fw-bolder text-center py-5" style="background-image: url(/assets/img/contact.jpg); background-size: cover;">
+        Liên hệ với chúng tôi
+    </h1>
+    <!-- Button trigger modal -->
+<button type="button" class="modal-popup d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="width: 400px!important; max-width: 50%;">
+      <div class="modal-content border-0" style="border-radius: 1rem;">
+        <div class="modal-body pt-5">
+            <div class="success-checkmark">
+                <div class="check-icon">
+                  <span class="icon-line line-tip"></span>
+                  <span class="icon-line line-long"></span>
+                  <div class="icon-circle"></div>
+                  <div class="icon-fix"></div>
+                </div>
+            </div>
+            <p class="text-center">Tin nhắn đã được ghi nhận.</br>Tự động quay lại trang chủ.</p>
+              <script>
+                function clickSuccessModal() {
+                    $(".modal-popup").click();
+                }
+                $(".modal-popup").click(function() {
+                    setTimeout(function() {
+                        location.href = 'index.html';
+                    }, 3000);
+                })
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row m-auto pt-4" style="max-width: 600px;">
+        <form action="#" onsubmit="clickSuccessModal();">
+
+            <div class="mb-3">
+              <label for="" class="form-label ps-2">Họ và tên</label>
+              <input type="text"
+                class="form-control" aria-describedby="helpId" minlength="5" required placeholder="Nino Nakano">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label ps-2">Email</label>
+              <input type="email" class="form-control" required aria-describedby="emailHelpId" placeholder="ninonakano@animail.com">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label ps-2">Số điện thoại</label>
+                <input type="text"
+                  class="form-control" minlength="9" maxlength="12" required id="" aria-describedby="helpId" placeholder="0969696969">
+              </div>
+            <div class="mb-3">
+              <label for="" class="form-label ps-2">Nội dung</label>
+              <textarea class="form-control" minlength="15" required rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn rounded-pill fw-bold" style="background-color: #ffd643;">Gửi</button>
+        </form>
+    </div>
+</div>
+<footer class="bg-dark text-center text-white" id="scrollContact">
+    <!-- Grid container -->
+        <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+            ></a>
+    
+            <!-- Google -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-google"></i
+            ></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+            ></a>
+    
+            <!-- Github -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-github"></i
+            ></a>
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Form -->
+        <section class="">
+            <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                <p class="pt-2">
+                    <strong>Đăng ký để nhận được thông tin mới nhất</strong>
+                </p>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example21" class="form-control rounded-pill email-input" placeholder="Địa chỉ email" />
+                </div>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn rounded-pill btn-outline-light mb-2 email-input-submit">
+                    Đăng ký
+                </button>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Links -->
+        <section class="mb-4">
+            <!--Grid row-->
+            <div class="row">
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Địa chỉ</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-shop"></i>
+                        Khu I, Đ. 30/4, Hưng Lợi, Ninh Kiều, Cần Thơ
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-shop"></i>
+                        Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Hotline</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-telephone"></i>
+                        0123456789
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-telephone"></i>
+                        0987654321
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Email</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-envelope"></i>
+                        Shoes_shop1@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-envelope"></i>
+                        Shoes_shop2@gmail.com
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center fw-bold text-dark p-3" style="background-color: #ffd643;">
+        © 2022 Copyright:
+        <a class="text-dark fw-bold" href="http://127.0.0.1:5500/index.html?#!">Shoesshop.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="/assets/js/itemsList.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>

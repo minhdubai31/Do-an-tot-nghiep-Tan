@@ -4,23 +4,24 @@ var promoPrice;
 var fadeTime = 300;
 
 /* Assign actions */
-
-$('.quantity input').change(function() {
-    updateQuantity(this);
+$(document).ready(function () {
+    
+    $('.quantity input').change(function() {
+        updateQuantity(this);
+    });
+    
+    $('.remove button').click(function() {
+        removeItem(this);
+    });
+    
+    $(document).ready(function() {
+        updateSumItems();
+    });
 });
 
-$('.remove button').click(function() {
-    removeItem(this);
-});
-
-$(document).ready(function() {
-    updateSumItems();
-});
 
 $('.promo-code-cta').click(function() {
-
     promoCode = $('#promo-code').val();
-
     if (promoCode == '10off' || promoCode == '10OFF') {
         //If promoPrice has no value, set it as 10 for the 10OFF promocode
         if (!promoPrice) {
@@ -123,4 +124,22 @@ function removeItem(removeButton) {
         recalculateCart();
         updateSumItems();
     });
+}
+
+// These code calculate total price of a type item and put it to webpage
+let itemTotalPrice=0;
+for(const product in itemList) {
+    itemTotalPrice+= itemList[product].price * window.localStorage.getItem(product);
+    if(window.localStorage.getItem(product) > 0) {
+        $(".basket-labels").after(`<div class="basket-product"> <div class="item"> <div class="product-image"> <img src="${itemList[product].photo}"alt="Placholder Image 2" class="product-frame"> </div><div class="product-details"> <h1><span class="item-quantity">${window.localStorage.getItem(product)}</span> x ${itemList[product].name}</h1> </div></div><div class="price product-price">${itemList[product].price}</div><div class="quantity"> <input type="number" value="${window.localStorage.getItem(product)}" min="1" class="quantity-field text-center" id="${product}" oninput="changeLocalStorage('${product}');"> </div><div class="subtotal product-subtotal">${itemList[product].price * window.localStorage.getItem(product)}</div><div class="remove"> <button class="px-2" onclick="removeFromCart('${product}');">Xóa khỏi giỏ hàng</button> </div></div>`);
+    }
+}
+$('#basket-total').text(itemTotalPrice);
+
+function removeFromCart(code) {
+    window.localStorage.setItem(code, 0);
+}
+
+function changeLocalStorage(code) {
+    window.localStorage.setItem(code, $(`#${code}`).val());
 }
