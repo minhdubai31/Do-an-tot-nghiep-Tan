@@ -436,3 +436,31 @@ input.form-control::placeholder {
     color: lightgray;
 }
 
+.carousel-indicators {
+    transform: translateY(50px);
+    border: solid 1px #383838;
+    border-radius: 50rem;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #383838!important;
+}
+
+.heart-icon {
+    line-height: 1rem;
+}
+
+
+.heart-icon:hover {
+    cursor: pointer;
+}
+
+.heart-icon > i {
+    font-size: 1.8rem!important;
+    color: #ef3f1d;
+    transform: translateY(6px);
+    transition: .5s ease;
+}
+
+.dropdown-item:hover {
+    text-decoration: none!important;
+}

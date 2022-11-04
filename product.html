@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán giày nè</title>
+    <script src="https://kit.fontawesome.com/fff06ecf43.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <div class="preload-bg w-100 h-100 bg-white"><div class="spinner"></div></div> 
+
+    <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
+        <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .5s ease;">
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="#"><img style="width: 200px;" src="/assets/img/logo.png" alt="" srcset=""></a>
+            <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <form class="d-flex col-7 ps-0 justify-content-end" role="search">
+              <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
+            </form>
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="">
+                <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
+                  <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
+                    <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
+                  </div>
+                </button>
+            </a>
+            <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
+                <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
+            </a>
+        </div>
+        <div class="container-fluid p-0">
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: #ffd643; height: 40px;">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item active" ><a href="#scrollHome" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#scrollIntroduction" class="nav-link">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Sanpham.html" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                        </a>                  
+                        <ul class="dropdown-menu shadow p-0 mb-2 rounded-0" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item py-2 fw-bold" href="Sanpham.html#scrollForMen">Nam</a></li>
+                          <li><a class="dropdown-item py-2 fw-bold" href="Sanpham.html#scrollForWomen">Nữ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#scrollContact" class="nav-link">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="modal fade " id="singnup-login-modal" tabindex="-1" aria-labelledby="singnup-login-modal-Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0">
+              <div class="container signup-login" id="signup-login container">
+                  <div class="form-container sign-up-container">
+                      <form action="#" style="width: 100%; transform: translateX(5px);">
+                          <h1 class="fw-bolder">Tạo tài khoản</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>Hoặc sử dụng email để đăng ký</span>
+                          <input type="text" placeholder="Tên người dùng" />
+                          <input type="email" placeholder="Tài khoản email" />
+                          <input type="password" placeholder="Mật khẩu" />
+                          <button>Đăng ký</button>
+                      </form>
+                  </div>
+                  <div class="form-container sign-in-container">
+                      <form action="#" style="width: 50%; transform: translateX(-12px)">
+                          <h1 class="fw-bolder">Đăng nhập</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                          <span>Hoặc sử dụng tài khoản email của bạn</span>
+                          <input type="email" placeholder="Tài khoản email" />
+                          <input type="password" placeholder="Mật khẩu" />
+                          <span class="mb-2"><a href="#">Quên mật khẩu?</a></span>
+                          <button>Đăng nhập</button>
+                      </form>
+                  </div>
+                  <div class="overlay-container">
+                      <div class="overlay">
+                          <div class="overlay-panel overlay-left">
+                              <h1 class="fw-bold">Bạn đã từng đến đây?</h1>
+                              <p>Hãy đăng nhập để chúng ta có thể kết nối với nhau.</p>
+                              <button class="ghost bg-dark border-0" id="signIn">Đăng nhập</button>
+                          </div>
+                          <div class="overlay-panel overlay-right">
+                              <h1 class="fw-bold">Shoes shop xin chào!</h1>
+                              <p>Nếu đây là lần đầu bạn đến đây, hãy đăng ký để nhận được thông tin mới nhất từ Shoes shop nhé!</p>
+                              <button class="ghost bg-dark border-0" id="signUp">Đăng ký</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row container-fluid pe-0">
+    <!-- Ads left side-->
+    <div class="col-0 col-md-3 col-xl-2 d-none d-md-block h-100 p-0 sticky-top leftsidepicture-container" style="top: 110px; z-index: 2;">
+        <div id="leftsidepicture" class="carousel slide h-100 my-3" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner leftside-carousel-inner h-100">
+                <div class="carousel-item active">
+                    <img src="/assets/img/pic1.jpg" class="d-block w-100 rounded" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/img/pic2.jpg" class="d-block w-100 rounded" alt="...">
+                </div>
+            </div>
+          </div>
+    </div>
+  <!-- Products -->
+  <div class="col-12 col-md-9 col-xl-8">
+            
+    <div id="scrollForMen" style="transform: translateY(-2rem);"></div>
+    <div class="hot-selling-products for-men-products container-fluid container-xl mt-5 mb-4">
+    
+        <!-- For men -->
+        <h3 class="fw-bolder text-center text-uppercase">Nam</h3>
+
+        <!-- For men products cards -->
+        <div class="row row-cols-2 row-cols-lg-3">
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-shoe-5nWPkx.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Go FlyEase</h5>
+                        <p class="card-text fs-6">3.519.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder"onclick="addCart('sp001');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/341e2ed9-9797-4f15-8d4f-265071377068/air-force-1-07-lv8-shoes-BS9f21.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Force 1 '07 LV8</h5>
+                        <p class="card-text fs-6">3.089.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp002');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e26f39f0-beaa-4a76-a6b7-ce63e3783d42/air-force-1-gtx-shoes-60rsTr.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Force 1 GTX</h5>
+                        <p class="card-text fs-6">4.699.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp003');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a516694e-c43a-4a90-af24-867dda765485/air-max-excee-shoe-lPbXqt.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Max Excee</h5>
+                        <p class="card-text fs-6">2.649.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp004');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3eb489c7-9793-417c-abfa-217314b2596d/nikecourt-react-vapor-nxt-hard-court-tennis-shoe-hJflW9.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Court React Vapor NXT</h5>
+                        <p class="card-text fs-6">4.699.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp005');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e2a045c5-7393-4717-9ddf-b6de12cfe641/blazer-low-77-jumbo-shoes-RGNB3j.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Blazer Low '77 Jumbo</h5>
+                        <p class="card-text fs-6">2.779.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp006');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bbb67f5d-0c85-41b9-b550-ee955d151cda/waffle-one-shoes-1SFQwJ.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Waffle One</h5>
+                        <p class="card-text fs-6">2.929.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp007');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ddfa2ece-01cc-4e30-8a60-d5fe922d3102/air-max-intrlk-lite-shoes-nfMxNF.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Max INTRLK lite</h5>
+                        <p class="card-text fs-6">2.349.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp008');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/209889d9-4910-4f06-9d07-18afa558b566/air-max-270-shoes-2V5C4p.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Max 270</h5>
+                        <p class="card-text fs-6">4.409.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp009');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/31dcbed40f7a45a7b745a91500a05e4b_9366/gi%C3%A0y-continental-80.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Continental 80</h5>
+                        <p class="card-text fs-6">2.700.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp010');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff0654f4089f4413baa7aae700d2a08c_9366/gi%C3%A0y-superstar.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Superstar</h5>
+                        <p class="card-text fs-6">2.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp011');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/9c98c1b6bc124b7f943eadf800cb2453_9366/gi%C3%A0y-retropy-f2.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Retropy F2</h5>
+                        <p class="card-text fs-6">2.400.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp012');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7beb6046aa5e4b5d8c69ae0d00f548f1_9366/gi%C3%A0y-galaxy-5.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Glaxy 5</h5>
+                        <p class="card-text fs-6">1.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp013');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/cf78fc3f39dd4159be77adf900a1b154_9366/gi%C3%A0y-nizza-hi-parley.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nizza Hi Parley</h5>
+                        <p class="card-text fs-6">2.900.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp014');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f91e2c9028c94126b019ae2700181efb_9366/gi%C3%A0y-stan-smith.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Stan Smith</h5>
+                        <p class="card-text fs-6">2.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp015');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a91d835f0ea4264a7e9ad8d01255d76_9366/gi%C3%A0y-adidas-x-allbirds.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Adidas x Allbirds</h5>
+                        <p class="card-text fs-6">3.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp016');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/dc1564178d9f40fabfd4ad6a00f93dbb_9366/gi%C3%A0y-nmd_r1-primeblue.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">NMD_R1 Primeblue</h5>
+                        <p class="card-text fs-6">3.600.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp017');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcb9e8bc25d249579d2dae0b00dbb039_9366/gi%C3%A0y-nmd_v3.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">MND_V3</h5>
+                        <p class="card-text fs-6">4.000.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp018');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>                                                                                                                                                                                                                        
+        </div>
+    </div>
+
+    <div class="hot-selling-products container-fluid container-xl mt-5 mb-4">
+    <div id="scrollForWomen" style="transform: translateY(-4.5rem);"></div>
+
+            
+        <!-- For women -->
+        <h3 class="fw-bolder for-women-products text-center text-uppercase">Nữ</h3>
+
+        <!-- For women products cards -->
+        <div class="row row-cols-2 row-cols-lg-3">
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7484c8a1-6c7c-415c-a433-3bc9a900d29d/go-flyease-shoes-3svRCL.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Go FlyEase</h5>
+                        <p class="card-text fs-6">3.829.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp019');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6e840eb6-3c2b-43d2-9d58-81b1a1019f8e/air-force-1-07-shoes-ZMwtBc.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Force 1 '07</h5>
+                        <p class="card-text fs-6">3.519.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp020');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a7147fca-ac80-4cb1-abb8-11f6c2bc3b95/air-max-koko-sandals-TlDB8L.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Max Koko</h5>
+                        <p class="card-text fs-6">2.929.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp021');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/13692558-551a-4b52-a05b-3124ece1962c/icon-classic-sandals-Jrc3kN.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Icon Classic</h5>
+                        <p class="card-text fs-6">1.759.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp022');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0c1dae87-02b9-486f-b3f2-ac9f8d5cccca/air-force-1-07-lv8-shoe-L89Z91.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Force 1 '07 LV8</h5>
+                        <p class="card-text fs-6">3.239.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp023');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/05698ac2-ecbe-4f25-8739-0a58b0b64242/superrep-go-3-flyknit-next-nature-training-shoes-zKqgRc.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike SuperRep Go 3 Flyknit Next Nature</h5>
+                        <p class="card-text fs-6">2.929.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp024');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6654b41e-e43b-4496-86e6-adf817e09979/air-force-1-07-lx-shoes-RbMfC9.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Force 1 '07 LX</h5>
+                        <p class="card-text fs-6">2.929.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp025');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/37dc552d-41e8-4fdd-8387-066d5fbf517a/air-max-1-shoes-Z7pLNf.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Air Max 1 Premium</h5>
+                        <p class="card-text fs-6">4.109.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp026');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6a51c38b-aa17-4155-9e70-9933a51c6bbc/offcourt-duo-slides-KkVCVZ.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Nike Offcourt Duo</h5>
+                        <p class="card-text fs-6">1.169.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp027');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/dcc8b21f893a457886d8ac0900afa80b_9366/gi%C3%A0y-stan-smith.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Stan Smith</h5>
+                        <p class="card-text fs-6">2.400.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp028');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/024e35152f7d412ca438adf3002a29bd_9366/gi%C3%A0y-postmove-se.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Post Move SE</h5>
+                        <p class="card-text fs-6">1.900.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp029');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7c557c1fedf41ffbdd0ad7b014723df_9366/gi%C3%A0y-stan-smith-rich-mnisi.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Stan Smith Rich Mnisi</h5>
+                        <p class="card-text fs-6">2.900.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp030');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0d15d8395c3f4c8dbb56ae1600f56c2b_9366/gi%C3%A0y-pureboost-22.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Pureboost 22</h5>
+                        <p class="card-text fs-6">3.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp031');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce20b4b0f20d400c9b38ae1300581b52_9366/gi%C3%A0y-ultraboost-22.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Ultraboost 22</h5>
+                        <p class="card-text fs-6">5.200.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp032');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0ac5c6b499114f168785ae4a018adaaa_9366/gi%C3%A0y-d.o.n.-issue-3.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">D.O.N Issue</h5>
+                        <p class="card-text fs-6">3.000.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp033');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/60eaacc01c724729bc58ae4a0031298d_9366/gi%C3%A0y-superstar.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Superstar</h5>
+                        <p class="card-text fs-6">2.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp034');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/5650bf1a096643d78479ae140028541e_9366/gi%C3%A0y-disney-forum-bold.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Disney Forum Bold</h5>
+                        <p class="card-text fs-6">2.800.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp035');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-2">
+                <div class="card h-100">
+                    <img class="img-hover-effect" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d4d72e14c9164c9f9266ac9200ccff34_9366/gi%C3%A0y-run-falcon-2.0.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="car-title fs-5">Run Falcon 2.0</h5>
+                        <p class="card-text fs-6">1.500.000đ</p>
+                    </div>
+                    <div class="card-footer text-center border-top-0">
+                        <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('sp036');">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Ads right side-->
+        <div class="col-0 col-xl-2 d-none d-xl-block h-100 p-0 sticky-top leftsidepicture-container" style="top: 110px; z-index: 2;">
+            <div id="leftsidepicture" class="carousel slide h-100 my-3" data-bs-ride="carousel" data-bs-interval="5500">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active">
+                        <img src="/assets/img/pic3.jpg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/pic4.jpg" class="d-block w-100 rounded" alt="...">
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+  <div class="position-fixed end-0 p-3" style="z-index: 11; bottom: 10%;">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header text-light rounded-top">
+        <strong class="me-auto">Giỏ hàng đã được cập nhật</strong>
+      </div>
+      <div class="toast-body">
+      </div>
+    </div>
+  </div>
+  <a href="cart.html" class="cart-icon position-fixed rounded-circle text-center text-white shadow" style="width: 55px; height: 55px; bottom: 3%; right: 45px; background-color: #FF4B2B; z-index: 10;">
+    <i class="fa-solid fa-basket-shopping" style="line-height:55px; font-size: 22px; transition: .6s ease;"></i>
+    <div class="rounded-pill position-absolute top-0 shadow" style="height: 20px; right: -10px; border: solid 2px #ffb700 ;padding: 0 0.4rem; background-color: #f9e686;">
+      <p class="cartItems fw-bold text-dark" style="font-size: 0.8rem; transform: translateY(-2px);">20</p>
+    </div>
+</a>
+<footer class="bg-dark text-center text-white" id="scrollContact">
+    <!-- Grid container -->
+        <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+            ></a>
+    
+            <!-- Google -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-google"></i
+            ></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+            ></a>
+    
+            <!-- Github -->
+            <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button"
+            ><i class="fab fa-github"></i
+            ></a>
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Form -->
+        <section class="">
+            <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                <p class="pt-2">
+                    <strong>Đăng ký để nhận được thông tin mới nhất</strong>
+                </p>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example21" class="form-control rounded-pill email-input" placeholder="Địa chỉ email" />
+                </div>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn rounded-pill btn-outline-light mb-2 email-input-submit">
+                    Đăng ký
+                </button>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Links -->
+        <section class="mb-4">
+            <!--Grid row-->
+            <div class="row">
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Địa chỉ</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-shop"></i>
+                        Khu I, Đ. 30/4, Hưng Lợi, Ninh Kiều, Cần Thơ
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-shop"></i>
+                        Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Hotline</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-telephone"></i>
+                        0123456789
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-telephone"></i>
+                        0987654321
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col">
+                <h5 class="text-uppercase contacting-ways mt-4">Email</h5>
+    
+                <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-envelope"></i>
+                        Shoes_shop1@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="text-white">
+                        <i class="bi bi-envelope"></i>
+                        Shoes_shop2@gmail.com
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center fw-bold text-dark p-3" style="background-color: #ffd643;">
+        © 2022 Copyright:
+        <a class="text-dark fw-bold" href="http://127.0.0.1:5500/index.html?#!">Shoesshop.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="/assets/js/itemsList.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>
