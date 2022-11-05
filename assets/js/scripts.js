@@ -1,3 +1,16 @@
+//Scroll to top
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'}); 
+}
+$(document).scroll(function () { 
+    if($(document).scrollTop() > 100) {
+        $(".scroll-to-top").fadeIn();
+    }
+    else {
+        $(".scroll-to-top").fadeOut();
+    }
+});
+
 //Resize search bar
 function searchbarResize() {
     if($(window).width() > 768 && $(window).width() < 1200) {

@@ -429,6 +429,10 @@ input.form-control::placeholder {
 .dropdown-item:hover {
     text-decoration: none!important;
 }
+.dropdown-item.active, .dropdown-item:active {
+    color: #212529;
+    background-color: #bcbcbc;
+}
 
 .form-control:focus {
     box-shadow: none;
@@ -437,4 +441,56 @@ input.form-control::placeholder {
 
 .btn:focus {
     box-shadow: none;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.website-available {
+    color: #bbb;
+}
+
+.cart-icon {
+    width: 55px; 
+    height: 55px; 
+    bottom: 3%; 
+    right: 45px; 
+    background-color: #FF4B2B; 
+    z-index: 10;
+}
+
+.cart-icon i {
+    line-height:55px; 
+    font-size: 22px; 
+    transition: .6s ease;
+}
+
+.cart-icon div {
+    height: 20px; 
+    right: -10px; 
+    border: solid 2px #ffb700;
+    padding: 0 0.4rem; 
+    background-color: #f9e686;
+}
+
+.cart-icon div p {
+    font-size: 0.8rem; 
+    transform: translateY(-2px);
+}
+
+.scroll-to-top {
+    display: none;
+    width: 25px; 
+    height: 25px; 
+    bottom: 12%; 
+    right: 60px; 
+    z-index: 10; 
+    transform: rotateZ(-90deg);
+    background-color: #FF4B2B;
+}
+
+.scroll-to-top i {
+    font-size: 1rem;
+    transform: translateY(-1px);
 }
