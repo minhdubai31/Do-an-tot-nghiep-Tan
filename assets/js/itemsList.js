@@ -1,6 +1,11 @@
-
+/*
+men = for men product
+women = for women product
+hot = hot product
+new = new product
+*/
 var itemList={
-    "sp001":{ 
+    "men001-hot":{ 
         "name":"Nike Go FlyEase",
         "price":3519000,
         "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-shoe-5nWPkx.png"
@@ -180,49 +185,46 @@ var itemList={
         "price":1500000,
         "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d4d72e14c9164c9f9266ac9200ccff34_9366/gi%C3%A0y-run-falcon-2.0.jpg"
     },
-    "new01":{
+    "-men01":{
         "name": "Adidas BOA TOUR360",
         "price": 6150000,
         "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f33bed88c81c4409a289adfa0186d4ee_9366/Giay_Golf_BOA_Tour360_22_trang_GY5337_01_standard.jpg"
     },
-    "new02":{
+    "new-men02":{
         "name": "Adidas NMD V3",
         "price": 4000000,
         "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d96de4432d7a4b29be12ae0b00dba127_9366/Giay_NMD_V3_trang_GW3063_01_standard.jpg"
     },
-    "new03":{
+    "new-men03":{
         "name": "Adidas 4DFWD PULSE",
         "price": 4500000,
         "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9326e8db8d8e4e509e42ad26010cf693_9366/Giay_adidas_4DFWD_Pulse_DJen_Q46451_01_standard.jpg"
     },
-    "new04":{
+    "new-men04":{
         "name": "Adidas Ultraboost 22",
         "price": 5200000,
         "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/99323516f2004510bd8aadf901472e5d_9366/Giay_Ultraboost_22_DJen_GX5564_01_standard.jpg"
     },
-    "new05":{
+    "new-men05":{
         "name": "Nike Air Jordan XXXVI",
         "price": 5439000,
         "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec6e3201-e235-4c25-ba5d-e8d0ef7e0478/air-jordan-xxxvi-pf-basketball-shoes-fjPfDg.png"
     },
-    "new06":{
+    "new-men06":{
         "name": "Nike Air Force 1 High",
         "price": 3669000,
         "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a31b078d-f2ce-422b-8231-5817f908a40d/air-force-1-high-07-lv8-vintage-shoes-s7bp1q.png"
     },
-    "new07":{
+    "new-men07":{
         "name": "Nike PG 6 EP",
         "price": 3239000,
         "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2d484182-8596-4d88-aa63-3d594d010d4a/pg-6-ep-basketball-shoes-9KkDtr.png"
     },
-    "new08":{
+    "new-men08":{
         "name": "Nike Air Max 90 SE",
         "price": 3829000,
         "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7ac12855-c31d-4961-b131-c68d8cd65b5a/air-max-90-se-shoes-C2hpvg.png"
-    }
-};
-
-var specialList = {
+    },
     "special1":{ 
         "name":"Nike Go FlyEase",
         "price":3519000,
@@ -263,4 +265,4 @@ var specialList = {
         "price":2349000,
         "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ddfa2ece-01cc-4e30-8a60-d5fe922d3102/air-max-intrlk-lite-shoes-nfMxNF.png"
     }
-}
+};

@@ -108,23 +108,23 @@ label {
 }
 
 .promo-code-cta:hover {
-    transition: .5s;
-    background-color: rgb(111, 111, 111)!important;
-  }
+  transition: .5s;
+  background-color: rgb(111, 111, 111)!important;
+}
 
 .promo-code-cta:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .basket-labels {
-    font-size: 0.9rem!important;
+  font-size: 0.9rem!important;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   margin-top: 1.625rem;
 }
 
 .basket-labels li {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .shopping-cart ul {
@@ -151,7 +151,7 @@ label {
 .price,
 .quantity,
 .subtotal {
-    font-size: .9rem;
+  font-size: .9rem;
   width: 15%;
 }
 
@@ -179,9 +179,9 @@ label {
 }
 
 .remove button:hover {
-    transition: .3s;
-    background-color: #ef3f1d;
-    color: #fff;
+  transition: .3s;
+  background-color: #ef3f1d;
+  color: #fff;
 }
 
 .item-heading {
@@ -206,7 +206,7 @@ label {
 }
 
 .product-details h1 {
-    font-size: .9rem;
+  font-size: .9rem;
 }
 
 .product-frame {
@@ -325,9 +325,9 @@ aside {
 }
 
 .checkout-cta:hover {
-    transition: .3s;
-    background-color: #db8400;
-    color: #fff;
+  transition: .3s;
+  background-color: #db8400;
+  color: #fff;
 }
 
 .summary-delivery-selection {

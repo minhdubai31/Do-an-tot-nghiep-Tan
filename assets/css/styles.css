@@ -104,8 +104,21 @@ a:hover {
     font-size: 1.1rem;
 }
 
+.card {
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+
 .card-title {
     height: 3rem;
+}
+
+.card-footer {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.card-footer:last-child {
+    border-radius: 0;
 }
 
 .img-hover-effect {
@@ -366,11 +379,6 @@ footer, .email-input, .email-input-submit{
     font-size: .8rem;
 }
 
-/* San pham */
-.leftsideAds-container{
-    top: 5rem;
-    z-index: 10!important;
-}
 
 .navbar-toggler{
     padding: 0.17rem 0.75rem!important;
