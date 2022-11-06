@@ -454,7 +454,7 @@ input.form-control::placeholder {
 .cart-icon {
     width: 55px; 
     height: 55px; 
-    bottom: 3%; 
+    bottom: 25px; 
     right: 45px; 
     background-color: #FF4B2B; 
     z-index: 10;
@@ -483,7 +483,7 @@ input.form-control::placeholder {
     display: none;
     width: 25px; 
     height: 25px; 
-    bottom: 12%; 
+    bottom: 86px; 
     right: 60px; 
     z-index: 10; 
     transform: rotateZ(-90deg);
@@ -493,4 +493,14 @@ input.form-control::placeholder {
 .scroll-to-top i {
     font-size: 1rem;
     transform: translateY(-1px);
+}
+
+.btn-floating {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.btn-floating i {
+    line-height: 30px;
 }

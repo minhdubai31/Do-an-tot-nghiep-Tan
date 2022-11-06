@@ -1,268 +1,227 @@
 /*
-men = for men product
-women = for women product
-hot = hot product
-new = new product
+Hướng dẫn thêm sản phẩm vào itemList
+
+Một sản phẩm bao gồm 4 thành phần:
+
+    "<mã sản phẩm>": {
+        "name": "<tên sản phẩm>",
+        "price": "<giá sản phẩm>",
+        "photo": "<đường dẫn chỉ đến ảnh sản phẩm>"
+    }
+
+
+1. Mã sản phẩm:
+    Một mã sản phẩm có định dạng như sau:
+
+    "<tính chất><mã số>"
+
+    Trong đó:
+        Tính chất:
+            men = sản phẩm cho nam
+            lady = sản phẩm cho nữ
+            hot = sản phẩm bán chạy
+            new = sản phẩm mới
+            (Lưu ý: Có thể kết hợp các tính chất nếu cần
+            VD: 
+                Sản phẩm vừa cho nam, vừa bán chạy "men-hot"
+                Sản phẩm vừa cho nam, vừa cho nữ, vừa mới: "men-lady-new"
+            )
+        Mã số: là số tự nhiên bất kỳ
+    
+    *Lưu ý: không đặt mã sản phẩm trùng nhau.
+
+2. Tên sản phẩm.
+
+3. Giá sản phẩm:
+    Là số tự nhiên viết liền không ngăn cách nhau bằng dấu cách chấm hoặc phẩy,...
+
+4. Đường dẫn chỉ đến ảnh sản phẩm:
+    Có thể là đường dẫn local hoặc đường dẫn ảnh bất kỳ copy trên internet
 */
 var itemList={
-    "men001-hot":{ 
-        "name":"Nike Go FlyEase",
-        "price":3519000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-shoe-5nWPkx.png"
+    "newhot1":{ 
+        "name":"Biti's Hunter x THE BATMAN",
+        "price":1521000,
+        "photo":"https://product.hstatic.net/1000230642/product/82ea49295c75932bca64_fb6f1517daaf46c399bd161d94c12ed7.jpg"
     },
-    "sp002":{ 
-        "name":"Nike Air Force 1 '07 LV8",
-        "price":3089000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/341e2ed9-9797-4f15-8d4f-265071377068/air-force-1-07-lv8-shoes-BS9f21.png"
+    "new2":{ 
+        "name":"Biti's Hunter x Marvel Spider-man",
+        "price":1425950,
+        "photo":"https://product.hstatic.net/1000230642/product/artboard_1-100_c6cd15bd196d4f4aa2dc869c2d02920d.jpg"
     },
-    "sp003":{ 
-        "name":"Nike Air Force 1 GTX",
-        "price":4699000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e26f39f0-beaa-4a76-a6b7-ce63e3783d42/air-force-1-gtx-shoes-60rsTr.png"
-    },
-    "sp004":{ 
-        "name":"Nike Air Max Excee",
-        "price":2649000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a516694e-c43a-4a90-af24-867dda765485/air-max-excee-shoe-lPbXqt.png"
-    },
-    "sp005":{ 
-        "name":"Nike Court React Vapor NXT",
-        "price":4699000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3eb489c7-9793-417c-abfa-217314b2596d/nikecourt-react-vapor-nxt-hard-court-tennis-shoe-hJflW9.png"
-    },
-    "sp006":{ 
-        "name":"Nike Blazer Low '77 Jumbo",
-        "price":2779000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e2a045c5-7393-4717-9ddf-b6de12cfe641/blazer-low-77-jumbo-shoes-RGNB3j.png"
-    },
-    "sp007":{ 
-        "name":"Nike Waffle One",
-        "price":2929000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bbb67f5d-0c85-41b9-b550-ee955d151cda/waffle-one-shoes-1SFQwJ.png"
-    },
-    "sp008":{ 
-        "name":"Nike Air Max INTRLK lite",
-        "price":2349000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ddfa2ece-01cc-4e30-8a60-d5fe922d3102/air-max-intrlk-lite-shoes-nfMxNF.png"
-    },
-    "sp009":{ 
-        "name":"Nike Air Max 270",
+    "new3":{
+        "name":"Jordan Delta 3 Mid",
         "price":4409000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/209889d9-4910-4f06-9d07-18afa558b566/air-max-270-shoes-2V5C4p.png"
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/47dfb42d-c70d-4bbe-b989-452fcfc75207/jordan-delta-3-mid-shoes-WwnTQl.png"
     },
-    "sp010":{ 
-        "name":"Continental 80",
-        "price":2700000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/31dcbed40f7a45a7b745a91500a05e4b_9366/gi%C3%A0y-continental-80.jpg"
+    "newhot4":{
+        "name":"Zoom Freak 4 'Letter Bros'",
+        "price":3669000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9aebc8ec-d0b1-4029-b0ea-5759acc98dba/zoom-freak-4-letter-bros-basketball-shoes-zmXv3D.png"
     },
-    "sp011":{ 
-        "name":"Superstar",
-        "price":2500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff0654f4089f4413baa7aae700d2a08c_9366/gi%C3%A0y-superstar.jpg"
-    },
-    "sp012":{ 
-        "name":"Retropy F2",
-        "price":2400000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/9c98c1b6bc124b7f943eadf800cb2453_9366/gi%C3%A0y-retropy-f2.jpg"
-    },
-    "sp013":{ 
-        "name":"Glaxy 5",
-        "price":1500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7beb6046aa5e4b5d8c69ae0d00f548f1_9366/gi%C3%A0y-galaxy-5.jpg"
-    },
-    "sp014":{ 
-        "name":"Nizza Hi Parley",
-        "price":2900000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/cf78fc3f39dd4159be77adf900a1b154_9366/gi%C3%A0y-nizza-hi-parley.jpg"
-    },
-    "sp015":{ 
-        "name":"Stan Smith",
-        "price": 2500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f91e2c9028c94126b019ae2700181efb_9366/gi%C3%A0y-stan-smith.jpg"
-    },
-    "sp016":{ 
-        "name":"Adidas x Allbirds",
-        "price":3500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a91d835f0ea4264a7e9ad8d01255d76_9366/gi%C3%A0y-adidas-x-allbirds.jpg"
-    },
-    "sp017":{ 
-        "name":"NMD_R1 Primeblue",
-        "price": 3600000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/dc1564178d9f40fabfd4ad6a00f93dbb_9366/gi%C3%A0y-nmd_r1-primeblue.jpg"
-    },
-    "sp018":{ 
-        "name":"MND_V3",
-        "price":4000000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcb9e8bc25d249579d2dae0b00dbb039_9366/gi%C3%A0y-nmd_v3.jpg"
-    },
-    "sp019":{ 
-        "name":"Nike Go FlyEase",
-        "price":3829000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7484c8a1-6c7c-415c-a433-3bc9a900d29d/go-flyease-shoes-3svRCL.png"
-    },
-    "sp020":{ 
-        "name":"Nike Air Force 1 '07",
+    "newhot5":{
+        "name":"NikeCourt Air Zoom Vapor Pro",
         "price":3519000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6e840eb6-3c2b-43d2-9d58-81b1a1019f8e/air-force-1-07-shoes-ZMwtBc.png"
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/118a4c51-41b0-4f92-8aa9-9ce89476a98d/nikecourt-air-zoom-vapor-pro-hard-court-tennis-shoe-1p8ZgF.png"
     },
-    "sp021":{ 
-        "name":"Nike Air Max Koko",
-        "price":2929000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a7147fca-ac80-4cb1-abb8-11f6c2bc3b95/air-max-koko-sandals-TlDB8L.png"
+    "newhot6":{
+        "name":"ZoomX Zegama",
+        "price":4409000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/fad81b09-baf2-4920-bfcf-e1e89a97d06b/zoomx-zegama-trail-running-shoes-LhRsM7.png"
     },
-    "sp022":{ 
-        "name":"Nike Icon Classic",
-        "price":1759000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/13692558-551a-4b52-a05b-3124ece1962c/icon-classic-sandals-Jrc3kN.png"
+    "menhot7":{
+        "name":"Air Jordan XXXVII PF",
+        "price":5439000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/087d5bc8-c714-4f90-9bbe-36c50c7eab77/air-jordan-xxxvii-pf-basketball-shoes-rthNXn.png"
     },
-    "sp023":{ 
-        "name":"Nike Air Force 1 '07 LV8",
-        "price":3239000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0c1dae87-02b9-486f-b3f2-ac9f8d5cccca/air-force-1-07-lv8-shoe-L89Z91.png"
-    },
-    "sp024":{ 
-        "name":"Nike SuperRep Go 3 Flyknit Next Nature",
-        "price":2929000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/05698ac2-ecbe-4f25-8739-0a58b0b64242/superrep-go-3-flyknit-next-nature-training-shoes-zKqgRc.png"
-    },
-    "sp025":{ 
-        "name":"Nike Air Force 1 '07 LX",
-        "price":2929000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6654b41e-e43b-4496-86e6-adf817e09979/air-force-1-07-lx-shoes-RbMfC9.png"
-    },
-    "sp026":{ 
-        "name":"Nike Air Max 1 Premium",
+    "men8":{
+        "name":"Metcon 8 AMP",
         "price":4109000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/37dc552d-41e8-4fdd-8387-066d5fbf517a/air-max-1-shoes-Z7pLNf.png"
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/75d37d05-a9bc-490a-b5fc-fd3baffbdb94/metcon-8-amp-training-shoes-7VTNbS.png"
     },
-    "sp027":{ 
-        "name":"Nike Offcourt Duo",
-        "price":1169000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6a51c38b-aa17-4155-9e70-9933a51c6bbc/offcourt-duo-slides-KkVCVZ.png"
-    },
-    "sp028":{ 
-        "name":"Stan Smith",
-        "price":2500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/dcc8b21f893a457886d8ac0900afa80b_9366/gi%C3%A0y-stan-smith.jpg"
-    },
-    "sp029":{ 
-        "name":"Post Move SE",
-        "price":1900000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/024e35152f7d412ca438adf3002a29bd_9366/gi%C3%A0y-postmove-se.jpg"
-    },
-    "sp030":{ 
-        "name":"Stan Smith Rich Mnisi",
-        "price":2900000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7c557c1fedf41ffbdd0ad7b014723df_9366/gi%C3%A0y-stan-smith-rich-mnisi.jpg"
-    },
-    "sp031":{ 
-        "name":"Pureboost 22",
-        "price":3500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0d15d8395c3f4c8dbb56ae1600f56c2b_9366/gi%C3%A0y-pureboost-22.jpg"
-    },
-    "sp032":{ 
-        "name":"Ultraboost 22",
-        "price":5200000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ce20b4b0f20d400c9b38ae1300581b52_9366/gi%C3%A0y-ultraboost-22.jpg"
-    },
-    "sp033":{ 
-        "name":"D.O.N Issue",
-        "price":3000000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/0ac5c6b499114f168785ae4a018adaaa_9366/gi%C3%A0y-d.o.n.-issue-3.jpg"
-    },
-    "sp034":{ 
-        "name":"Superstar",
-        "price":2500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/60eaacc01c724729bc58ae4a0031298d_9366/gi%C3%A0y-superstar.jpg"
-    },
-    "sp035":{ 
-        "name":"Disney Forum Bold",
-        "price":2800000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/5650bf1a096643d78479ae140028541e_9366/gi%C3%A0y-disney-forum-bold.jpg"
-    },
-    "sp036":{ 
-        "name":"Run Falcon 2.0",
-        "price":1500000,
-        "photo": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d4d72e14c9164c9f9266ac9200ccff34_9366/gi%C3%A0y-run-falcon-2.0.jpg"
-    },
-    "-men01":{
-        "name": "Adidas BOA TOUR360",
-        "price": 6150000,
-        "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f33bed88c81c4409a289adfa0186d4ee_9366/Giay_Golf_BOA_Tour360_22_trang_GY5337_01_standard.jpg"
-    },
-    "new-men02":{
-        "name": "Adidas NMD V3",
-        "price": 4000000,
-        "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d96de4432d7a4b29be12ae0b00dba127_9366/Giay_NMD_V3_trang_GW3063_01_standard.jpg"
-    },
-    "new-men03":{
-        "name": "Adidas 4DFWD PULSE",
-        "price": 4500000,
-        "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9326e8db8d8e4e509e42ad26010cf693_9366/Giay_adidas_4DFWD_Pulse_DJen_Q46451_01_standard.jpg"
-    },
-    "new-men04":{
-        "name": "Adidas Ultraboost 22",
-        "price": 5200000,
-        "photo": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/99323516f2004510bd8aadf901472e5d_9366/Giay_Ultraboost_22_DJen_GX5564_01_standard.jpg"
-    },
-    "new-men05":{
-        "name": "Nike Air Jordan XXXVI",
-        "price": 5439000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec6e3201-e235-4c25-ba5d-e8d0ef7e0478/air-jordan-xxxvi-pf-basketball-shoes-fjPfDg.png"
-    },
-    "new-men06":{
-        "name": "Nike Air Force 1 High",
-        "price": 3669000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a31b078d-f2ce-422b-8231-5817f908a40d/air-force-1-high-07-lv8-vintage-shoes-s7bp1q.png"
-    },
-    "new-men07":{
-        "name": "Nike PG 6 EP",
-        "price": 3239000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2d484182-8596-4d88-aa63-3d594d010d4a/pg-6-ep-basketball-shoes-9KkDtr.png"
-    },
-    "new-men08":{
-        "name": "Nike Air Max 90 SE",
-        "price": 3829000,
-        "photo": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7ac12855-c31d-4961-b131-c68d8cd65b5a/air-max-90-se-shoes-C2hpvg.png"
-    },
-    "special1":{ 
-        "name":"Nike Go FlyEase",
-        "price":3519000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-shoe-5nWPkx.png"
-    },
-    "special2":{ 
-        "name":"Nike Air Force 1 '07 LV8",
-        "price":3089000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/341e2ed9-9797-4f15-8d4f-265071377068/air-force-1-07-lv8-shoes-BS9f21.png"
-    },
-    "special3":{ 
-        "name":"Nike Air Force 1 GTX",
-        "price":4699000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e26f39f0-beaa-4a76-a6b7-ce63e3783d42/air-force-1-gtx-shoes-60rsTr.png"
-    },
-    "special4":{ 
-        "name":"Nike Air Max Excee",
+    "men9":{
+        "name":"Air Max Impact 4",
         "price":2649000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a516694e-c43a-4a90-af24-867dda765485/air-max-excee-shoe-lPbXqt.png"
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7bd37050-cf54-4ca8-a0ab-7140de9bf991/air-max-impact-4-basketball-shoes-CcJxBx.png"
     },
-    "special5":{ 
-        "name":"Nike Court React Vapor NXT",
-        "price":4699000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3eb489c7-9793-417c-abfa-217314b2596d/nikecourt-react-vapor-nxt-hard-court-tennis-shoe-hJflW9.png"
+    "new10":{
+        "name":"Air Kukini SE",
+        "price":4109000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3d65d7d9-8f0e-413f-8d0b-3f72f1ccecdb/air-kukini-se-shoes-mGmph3.png"
     },
-    "special6":{ 
-        "name":"Nike Blazer Low '77 Jumbo",
-        "price":2779000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e2a045c5-7393-4717-9ddf-b6de12cfe641/blazer-low-77-jumbo-shoes-RGNB3j.png"
+    "men11":{
+        "name":"Air Huarache Crater Premium",
+        "price":4109000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/198f957e-7a2f-4bfd-8e33-0d4dda3b502f/air-huarache-crater-shoes-PzhqmB.png"
     },
-    "special7":{ 
-        "name":"Nike Waffle One",
+    "lady12":{
+        "name":"Jumpman Two Trey",
+        "price":4409000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/fb4da480-42e2-4daa-b75c-dc88e719e9e4/jumpman-two-trey-shoes-rhmBzG.png"
+    },
+    "new13":{
+        "name":"React Infinity Run Flyknit 3",
+        "price":527000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/343fd443-412e-41bb-8f9e-95b32b62e19a/custom-nike-react-infinity-run-3-by-you.png"
+    },
+    "men14":{
+        "name":"Zoom Mercurial Vaper 15 Elite FG",
+        "price":8219000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0bf5223f-133a-444d-b095-33975925a978/custom-nike-zoom-mercurial-vapor-15-elite-by-you.png"
+    },
+    "hotlady15":{
+        "name":"Air Max By You",
+        "price":5589000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f6e3033f-400f-40b4-9b85-cfc93b18ce56/custom-nike-air-max-97-by-you.png"
+    },
+    "hotlady16":{
+        "name":"Oneonta",
+        "price":1909000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5d58a83b-c839-4b4a-bf3a-dc7a755c305f/oneonta-sandals-hb3phr.png"
+    },
+    "men17":{
+        "name":"Air Jordan 6 Retro",
+        "price":5589000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6a412738-c878-43a3-af4d-a372c6291563/air-jordan-6-retro-shoes-4m3b9d.png"
+    },
+    "menlady18":{
+        "name":"Air Jordan 3 Retro",
+        "price":5589000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c1693941-d709-4840-8442-0f8cc0195b2b/air-jordan-3-retro-shoes-TJf2lm.png"
+    },
+    "newhot19":{
+        "name":"Air Max Terascape 97",
+        "price":5589000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4d9d80ba-42aa-4726-a276-416bf50a4d03/air-max-terrascape-97-shoes-3cGxRv.png"
+    },
+    "men20":{
+        "name":'Luka 1 "Next Nature" PF',
+        "price":3239000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/721f7f93-0f2a-4cbf-baf4-72c841f60c21/luka-1-next-nature-pf-basketball-shoes-szjnCq.png"
+    },
+    "menhot21":{
+        "name":'ACG Mountain Fly Low SE',
+        "price":4409000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/703e8bba-2a1b-4efe-98bc-9ec923174c5b/acg-mountain-fly-low-se-shoes-PFCvHS.png"
+    },
+    "lady22":{
+        "name":'Air Trainer 1',
+        "price":3829000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e73338e1-7967-49e7-9a40-1b41def25659/air-trainer-1-shoes-r74Kcn.png"
+    },
+    "menlady22":{
+        "name":'Vaporfly NEXT% 2',
+        "price":6609000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/93536e83-3116-4e49-81b5-fa66060473d8/vaporfly-next-2-road-racing-shoes-D4ntS0.png"
+    },
+    "lady23":{
+        "name":'ZoomX Invincible Run Flyknit 2',
+        "price":5279000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f10d10c2-352b-48ed-a72a-f3cacfeee210/zoomx-invincible-run-flyknit-2-road-running-shoes-xrCMmF.png"
+    },
+    "new24":{
+        "name":'M2K Tekno SP',
+        "price":3829000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0m8qwgt2dmhouabjyc3/m2k-tekno-sp-shoes-HPc8RX.png"
+    },
+    "menhot25":{
+        "name":'Hyperdunk SP',
+        "price":3829000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/rksfro2vatbpmnuii5md/hyperdunk-ep-basketball-shoes-J050xp.png"
+    },
+    "hotlady26":{
+        "name":'Cosmic Unity 2',
+        "price":4409000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7eb7999b-bd65-4da5-a1e3-7e16653ad430/cosmic-unity-2-basketball-shoes-S6n2s3.png"
+    },
+    "new27":{
+        "name":"Zoom Freak 4 'Bahamas'",
+        "price":3959000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a830cd8e-8b86-436c-8437-a00255af3f25/zoom-freak-4-bahamas-basketball-shoes-2qvDHd.png"
+    },
+    "men28":{
+        "name":"Kyrie Low 5 EP",
+        "price":3239000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6cadcd46-c87e-402d-9268-e59d977e7d3c/kyrie-low-5-ep-basketball-shoes-kR6wcp.png"
+    },
+    "men29":{
+        "name":"Air Jordan XXXVI Low Luka PF",
+        "price":5129000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ca5f5598-3d5b-4747-aba2-b8803f9807c5/air-jordan-xxxvi-low-luka-pf-basketball-shoes-zNLHjc.png"
+    },
+    "new30":{
+        "name":"LeBron Witness 7 EP",
         "price":2929000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bbb67f5d-0c85-41b9-b550-ee955d151cda/waffle-one-shoes-1SFQwJ.png"
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0e91d1de-cfdc-41f2-814f-e3f54e73f12c/lebron-witness-7-ep-basketball-shoes-FKPXCg.png"
     },
-    "special8":{ 
-        "name":"Nike Air Max INTRLK lite",
-        "price":2349000,
-        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ddfa2ece-01cc-4e30-8a60-d5fe922d3102/air-max-intrlk-lite-shoes-nfMxNF.png"
+    "lady31":{
+        "name":"Jordan Delta Low",
+        "price":4109000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0f016baf-3f8b-4eb1-89e1-7a70a1eefce2/jordan-delta-3-low-shoes-fQrm6Q.png"
+    },
+    "menlady32":{
+        "name":"Metcon 8 AMP",
+        "price":4109000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/75d37d05-a9bc-490a-b5fc-fd3baffbdb94/metcon-8-amp-training-shoes-7VTNbS.png"
+    },
+    "menlady33":{
+        "name":"SuperRep Cycle 2 Next Nature",
+        "price":3519000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e577224c-180e-483f-bbc8-1fae2d6b9a92/superrep-cycle-2-next-nature-indoor-cycling-shoes-ZhSL67.png"
+    },
+    "lady34":{
+        "name":"Wafle Debut",
+        "price":2069000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8607e969-a574-40f5-bfe2-aa7f912bbeb5/waffle-debut-shoes-JRWJk7.png"
+    },
+    "lady35":{
+        "name":"Air Zoom Pegasus 39 A.I.R Hola Lou",
+        "price":3829000,
+        "photo":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cc8e8ae1-5e2a-40ac-b8ba-77515d72ecb6/air-zoom-pegasus-39-air-hola-lou-road-running-shoes-HzV9f8.png"
+    },
+    "lady36":{
+        "name":"Dunk Low Unlocked",
+        "price":4409000,
+        "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b13b1f5b-33c7-4390-9c4c-d89f8e120eae/custom-nike-dunk-unlocked-by-you.png"
     }
 };

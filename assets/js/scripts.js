@@ -185,11 +185,11 @@ function addNewProductCarousel(col) {
 
             let NewProductCard =
             `<div class="col">
-                <div class="card h-100">
-                    <img class="w-100 img-hover-effect" src="${itemList[product].photo}" alt="">
+                <div class="card">
+                    <div class="card-img rounded-0 overflow-hidden"><img class="img-hover-effect w-100" src="${itemList[product].photo}" alt=""></div>
                     <div class="card-body">
                         <h5 class="card-title fs-5">${itemList[product].name}</h5>
-                        <p class="card-text fs-6">${new Intl.NumberFormat((['ban', 'id'])).format(itemList[product].price)} VND</p>
+                        <p class="card-text fs-6">${new Intl.NumberFormat().format(itemList[product].price)} đ</p>
                     </div>
                     <div class="card-footer text-center border-top-0">
                         <a title="Thêm yêu thích" class="pe-3 heart-icon ${product}" onclick="addWishList('${product}');"><i class="fa-regular fa-heart"></i></a>
@@ -289,6 +289,13 @@ $(document).ready(function () {
     //Set badge
     countCart();
     $(".cartItems").text(cartItems);
+
+
+    //Assure product card image always square
+    $(".card-img").css("height", `${$(".card:last-child").width()}`);
+    $(window).resize(function () { 
+        $(".card-img").css("height", `${$(".card:last-child").width()}`);
+    });
 });
 
 
@@ -301,11 +308,11 @@ let count = 0;
 for (const product in itemList) {
     let addProductCard = 
     `<div class="col my-2">
-        <div class="card h-100">
-            <img class="img-hover-effect" src="${itemList[product].photo}" alt="" class="card-img-top">
+        <div class="card">
+            <div class="card-img rounded-0 overflow-hidden"><img class="img-hover-effect w-100" src="${itemList[product].photo}" alt=""></div>
             <div class="card-body">
-                <h5 class="car-title fs-5">${itemList[product].name}</h5>
-                <p class="card-text fs-6">${new Intl.NumberFormat((['ban', 'id'])).format(itemList[product].price)} VND</p>
+                <h5 class="card-title fs-5">${itemList[product].name}</h5>
+                <p class="card-text fs-6">${new Intl.NumberFormat().format(itemList[product].price)} đ</p>
             </div>
             <div class="card-footer text-center border-top-0">
                 <a title="Thêm yêu thích" class="pe-3 heart-icon ${product}" onclick="addWishList('${product}');"><i class="fa-regular fa-heart"></i></a>
@@ -326,8 +333,9 @@ for (const product in itemList) {
         $(".for-men-products-card").append(addProductCard);
     }
 
-    if(product.search("women") != -1) {
+    if(product.search("lady") != -1) {
         $(".for-women-products-card").append(addProductCard);
     }
     count++;
 }
+
