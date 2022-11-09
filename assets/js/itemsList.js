@@ -101,7 +101,7 @@ var itemList={
     },
     "new13":{
         "name":"React Infinity Run Flyknit 3",
-        "price":527000,
+        "price":5279000,
         "photo":"https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/343fd443-412e-41bb-8f9e-95b32b62e19a/custom-nike-react-infinity-run-3-by-you.png"
     },
     "men14":{
