@@ -544,4 +544,5 @@ input.form-control::placeholder {
 
 .btn-floating i {
     line-height: 30px;
+    background-color: #ffd643;
 }
