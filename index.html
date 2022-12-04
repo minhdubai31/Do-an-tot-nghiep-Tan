@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Embed google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,38 +22,65 @@
 
     <!-- Navigation bar -->
     <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
-        <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .4s ease;">
-            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="index.html"><img style="width: 200px;" src="./assets/img/logo.png" alt="" srcset=""></a>
+
+        <!-- First row navbar -->
+        <div class="topnav container-fluid row justify-content-center ms-0 py-3">
+            <!-- Logo -->
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="index.html">
+                <img src="./assets/img/logo.png" alt="">
+            </a>
+
+            <!-- Navbar toggler icon -->
             <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" style="transform: translateX(-2px);">
                     <i class="fa-solid fa-bars"></i>
                 </span>
             </button>
-            <form class="d-flex col-7 ps-0 justify-content-end" role="search">
+
+            <!-- Search form -->
+            <form class="d-flex col-7 ps-0 justify-content-end search-form" role="search">
                 <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
+                <button class="btn rounded-circle" type="submit">
+                    <i class="fa-solid search-icon fa-magnifying-glass text-light"></i>
+                </button>
             </form>
-            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="cart.html">
+
+            <!-- Cart -->
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0 navbar-cart-icon" href="cart.html">
                 <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
-                    <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
-                        <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
+                    <!-- Cart items count -->
+                    <div class="rounded-pill position-absolute">
+                        <p class="cartItems fw-bold text-light">0</p>
                     </div>
                 </button>
             </a>
+
+            <!-- Account icon -->
             <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
-                <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-user"></i>
+                </button>
             </a>
         </div>
+
+        <!-- Second row navbar -->
         <div class="container-fluid p-0">
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- Responsive menu -->
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body" style="background-color: #ffd643; height: 40px;">
+
+                <!-- Navbar items -->
+                <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item active" ><a href="#" onclick="scrollToTop();" class="nav-link">Trang chủ</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#website-unavailable">Giới thiệu</a></li>
+                        <li class="nav-item active" >
+                            <a href="#" onclick="scrollToTop();" class="nav-link">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#website-unavailable">Giới thiệu</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="product.html">Sản phẩm</a>               
                             <ul class="dropdown-menu shadow p-0 mb-2 rounded-0" aria-labelledby="dropdownMenuLink">
@@ -69,15 +97,16 @@
         </div>
     </nav>
     
-    <div class="modal fade" id="website-unavailable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" style="width: 500px!important; max-width: 50%;">
+    <!-- In completion process -->
+    <div class="modal fade uncomplete-popup" id="website-unavailable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content border-0" style="border-radius: 1rem;">
                 <div class="modal-header border-0 pb-0">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body pt-0  text-center">
                     <p class="text-center fw-bolder">Trang web này đang trong quá trình hoàn thiện. </br>Mong bạn thông cảm.</p>
-                    <img class="w-50 mb-4 rounded-circle" src="./assets/img/ninosadface.jpg" alt="" srcset="">
+                    <img class="w-50 mb-4 rounded-circle" src="./assets/img/ninosadface.jpg" alt="">
                     <p class="text-center mb-0 fw-bold website-available">Hiện tại các trang đã hoàn thiện bao gồm:</p>
                     <p class="website-available px-5">Trang chủ, sản phẩm, liên hệ, giỏ hàng và popup đăng nhập/đăng ký.</p>
                 </div>

@@ -64,6 +64,47 @@ a:hover {
     transition: .3s;
 }
 
+.topnav {
+    transition: .4s ease;
+}
+
+.navbar-brand img{
+    width: 200px;
+}
+
+.search-form button {
+    width: 38px; 
+    background-color: #ef3f1d;
+}
+
+.search-form .search-icon {
+    font-size: 1rem; 
+    transform: translateX(-2px);
+}
+
+.navbar-cart-icon div {
+    height: 15px; 
+    top: 2px; 
+    right: 2px; 
+    padding: 0 0.3rem; 
+    background-color: #ef3f1d;
+}
+
+.navbar-cart-icon div p {
+    font-size: 0.7rem; 
+    transform: translateY(-1px);
+}
+
+.offcanvas-body {
+    background-color: #ffd643; 
+    height: 40px;
+}
+
+.uncomplete-popup .modal-dialog{
+    width: 500px!important; 
+    max-width: 50%;
+}
+
 .preload-bg {
     width: 100%;
     height: 100%;
